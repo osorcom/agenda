@@ -1,0 +1,38 @@
+body, nav, main{
+  padding:0;
+  margin:0;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  box-sizing: border-box;
+  min-height: 600px;
+  border: 2px solid black;
+}
+
+main {
+  float: left;
+  border: 2px solid black;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 1em;
+  min-height: 600px;
+}
+
+header h1{
+  color: orange;
+  background-color: black;
+  padding: 1em;
+  margin: 0;
+}
+
+nav ul{
+  margin:0;
+  padding: 1em;
+  background-color: white;
+}
+
+nav li{
+  margin-left: 2em;
+}

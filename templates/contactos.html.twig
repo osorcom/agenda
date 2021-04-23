@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactos{% endblock %}
+
+{% block main %}
+<h1>Contactos</h1>
+<table>
+  {% for c in contactos %}
+  <tr>
+    <td>{{ c.id }}</td>
+    <td>{{ c.nom }}</td>
+    <td>{{ c.email }}</td>
+    <td>{{ c.telf }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

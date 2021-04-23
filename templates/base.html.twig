@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% block head %}
+    <meta charset="utf-8">
+    <title>Agenda - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/css/estils.css">
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <h1>Agenda</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="/">Inici</a></li>
+        <li><a href="/contactos">Contactos</a></li>
+        <li><a href="/notas">Notas</a></li>
+        <li><a href="/compromisos">Compromisos</a></li>
+      </ul>
+    </nav>
+    <main>
+      {% block main %}
+      {% endblock %}
+    </main>
+  </body>
+</html>
