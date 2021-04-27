@@ -1,2 +1,3 @@
-vender/
+vendor/
 composer.lock
+db_config.php

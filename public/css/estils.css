@@ -36,3 +36,21 @@ nav ul{
 nav li{
   margin-left: 2em;
 }
+
+button.delete {
+  background-color: rgb(255,200,200);
+  border: 1px solid rgb(100,0,0);
+  color: rgb(100,0,0);
+  padding:4px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgb(100,0,0);
+}
+
+table tr td {
+  padding: 3px 15px;
+  border-style: none;
+}
+
+table tr:nth-child(2n) td{
+  background-color: lightblue;
+}

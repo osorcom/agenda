@@ -11,7 +11,9 @@
     <td>{{ c.nom }}</td>
     <td>{{ c.email }}</td>
     <td>{{ c.telf }}</td>
+    <td><button class="delete" data-id="{{ c.id }}">X</button></td>
   </tr>
   {% endfor %}
 </table>
+<script src="/js/ajax.js"></script>
 {% endblock %}
