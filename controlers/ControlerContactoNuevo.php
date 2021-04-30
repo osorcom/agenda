@@ -4,7 +4,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use agenda\Models\Contacto as Contacto;
 
-class ControlerDeleteContacto
+class ControlerContactoNuevo
 {
    private $container;
 
@@ -15,18 +15,15 @@ class ControlerDeleteContacto
 
    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
    {
-     $c = Contacto::find($args['id']);
-     $out = ['error'=>true, 'message'=>'No se ha podido borrar. Contacto no encontrado.'];
-     if($c) {
-       try {
-         $c->delete();
-         $out['error'] = false;
-         $out['message'] = "Contacto borrado.";
-       } catch (\Exception $e) {
-         $out['message'] = $e->getMessage();
-       }
+     $datos = $request->getParsedBody();
+     $out = ["error"=>false, 'message'=>'Contacto creado.'];
+     try {
+       $contacto = Contacto::Create($datos);
+       $out['contacto'] = $contacto;
+     } catch (\Exception $e) {
+       $out['error'] = true;
+       $out['message'] = $e->getMessage();
      }
-
      $response->getBody()->write(json_encode($out));
      return $response->withHeader('Content-Type', 'application/json');
    }

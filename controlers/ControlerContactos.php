@@ -4,7 +4,6 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use agenda\Models\Contacto as Contacto;
 
-require __DIR__.'/../models/Contacto.php';
 
 class ControlerContactos
 {

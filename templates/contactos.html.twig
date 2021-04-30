@@ -3,6 +3,7 @@
 {% block title %}Contactos{% endblock %}
 
 {% block main %}
+<section id="data">
 <h1>Contactos</h1>
 <table>
   {% for c in contactos %}
@@ -15,5 +16,26 @@
   </tr>
   {% endfor %}
 </table>
+
+<ul id="acciones">
+  <li><button id="but-nuevo-contacto">Nuevo contacto</button></li>
+</ul>
+</section>
+<section id="form-nuevo">
+  <h1>Contacto Nuevo</h1>
+  <form action="" method="post">
+    <label for="textNom">NOMBRE</label>
+    <input type="text" name="nombre" value="" id="textNom">
+    <label for="textEmail">EMAIL</label>
+    <input type="text" name="nombre" value="" id="textEmail">
+    <label for="textTelf">TELEFONO</label>
+    <input type="text" name="nombre" value="" id="textTelf">
+    <div>
+      <button type="button" id="butCrearContacto">CREAR CONTACTO</button>
+      <button type="button" id="butCancelarContacto">CANCELAR</button>
+    </div>
+  </form>
+</section>
+
 <script src="/js/ajax.js"></script>
 {% endblock %}
