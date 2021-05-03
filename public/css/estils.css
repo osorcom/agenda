@@ -156,3 +156,28 @@ section#form-nuevo form div{
 section#form-nuevo form div button{
   margin: 0 2em;
 }
+
+
+/*************************************************************/
+/*            Estadistica - footer                           */
+/*************************************************************/
+footer{
+  text-align:  center;
+  clear: both;
+  background-color: black;
+  color: orange;
+}
+
+
+footer table{
+  display: inline-block;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 15px;
+}
+
+
+footer table * {
+  border: 1px solid orange;
+  padding: 3px;
+}

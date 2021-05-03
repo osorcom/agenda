@@ -23,5 +23,15 @@
       {% block main %}
       {% endblock %}
     </main>
+    <footer>
+    <table>
+    {% for est in estatistics %}
+      <tr>
+        <td>{{ est.url }}</td>
+        <td>{{ est.total }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+    </footer>
   </body>
 </html>
